@@ -15,14 +15,10 @@ void Factorial(int UserInput)
 */
 
 //How Greg did it
-int target = 4;
+int target = 6;
 int product = FactorialG(target);
 
-for(int idx = 1; idx <= target; idx++)
-{
-    product *= idx;
-}
-Console.WriteLine($"{target}! is {product}");
+
 
 
 
@@ -35,6 +31,19 @@ int FactorialG(int nbr)
     }
     return nbr * FactorialG(nbr - 1);
 
+
 }                                                       //Need to make sure the function has a command to stop calling itself
 
-
+Console.WriteLine($"{target}! is {product}");
+//Recursive Functions take up a lot of memory
+//Everytime you call a funtion and it calls itself, the machine has to hold memory to store the instance that is being put on hold
+/*
+ * another way of doing it
+ * int Factorialloop(int nbr) {
+ * int product = 1;
+ *  for(int idx =1; idx <= target; idx++) {
+ *  prodcut *= idx;
+ *  }
+ *  return product;
+ * }
+ */
